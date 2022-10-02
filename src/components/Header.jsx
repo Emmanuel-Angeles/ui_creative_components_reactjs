@@ -29,6 +29,14 @@ const Header = () => {
                                 Modal
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink
+                                to='Pokeapi'
+                                className={({ isActive }) => isActive ? 'link activeItem' : 'link' }
+                            >
+                                Pokeapi
+                            </NavLink>
+                        </li>
                     </ul>
                 </nav>
             </div>

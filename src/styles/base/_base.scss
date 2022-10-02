@@ -1,0 +1,17 @@
+@use "../utils/variables";
+body {
+    background: variables.$colorDark;
+    color: variables.$colorWhite;
+    font-family: 'Poppins', sans-serif;
+}
+
+.containerCenter {
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: grid;
+    place-items: center;
+}
+
+.generalTitle {
+    color: variables.$colorSix;
+}

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './containers/Layout';
 import Home from './pages/Home';
 import Modal from './pages/Modal';
+import Pokeapi from './pages/Pokeapi';
 import './styles/App.scss'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='Modal' element={<Modal />} />
+            <Route path='Pokeapi' element={<Pokeapi />} />
           </Routes>
         </Layout>
       </BrowserRouter>

@@ -1,0 +1,63 @@
+@use "../utils/variables";
+@use "../utils/mixins";
+
+.header_container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 10px 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.logo_figure {
+    display: flex;
+    align-items: center;
+}
+
+.logo_figure img {
+    width: 280px;
+}
+
+.nav {
+    ul {
+        display: flex;
+        margin-left: 20px;
+        li {
+            list-style: none;
+            +li {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+.link {
+    border-radius: 20px;
+    color: variables.$colorFive;
+    display: block;
+    font-weight: 500;
+    padding: 8px 20px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:hover {
+        color: variables.$colorWhite;
+    }
+    &:before {
+        @include mixins.shapeAnimation(-20px);
+    }
+    &:after {
+        @include mixins.shapeAnimation(100%);
+    }
+    &:hover:before,
+    &:hover:after {
+        @include mixins.hoverShapeAnimation();
+    }
+}
+
+.activeItem {
+    color: variables.$colorWhite;
+    background: variables.$colorTwo;
+}

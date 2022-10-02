@@ -1,0 +1,17 @@
+@use "../utils/variables";
+
+@mixin shapeAnimation($left) {
+    content: '';
+    position: absolute;
+    left: $left;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: variables.$colorTwo;
+    transition: .5s;
+    z-index: -1;
+}
+
+@mixin hoverShapeAnimation {
+    transform: scale(10);
+}
